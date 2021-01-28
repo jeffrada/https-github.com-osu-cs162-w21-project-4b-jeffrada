@@ -38,11 +38,3 @@ def box_sort(box_list):
             box_list[pos + 1] = box_list[pos]
             pos -= 1
         box_list[pos + 1] = box
-
-
-# Below is testing code
-b1 = Box(3.4, 19.8, 2.1)
-b2 = Box(1.0, 1.0, 1.0)
-b3 = Box(8.2, 8.2, 4.5)
-box_list = [b1, b2, b3]
-box_sort(box_list)

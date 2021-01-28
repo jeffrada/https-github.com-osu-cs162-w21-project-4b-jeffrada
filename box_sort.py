@@ -28,7 +28,7 @@ class Box:
 
 def box_sort(box_list):
     """
-  Sorts box_list in ascending order
+  Sorts box_list in descending order
     """
     for index in range(1, len(box_list)):
         box = box_list[index]
@@ -38,3 +38,4 @@ def box_sort(box_list):
             box_list[pos + 1] = box_list[pos]
             pos -= 1
         box_list[pos + 1] = box
+    box_list.reverse()

@@ -42,6 +42,12 @@ def box_sort(box_list):
             pos -= 1
         vol_list[pos + 1] = value
     print(vol_list)
+    sorted_box_list = []
+    for volume in vol_list:
+        for box in box_list:
+            if box.volume() == volume:
+                sorted_box_list.append(box)
+    return sorted_box_list
 
 # Below is testing code
 b1 = Box(3.4, 19.8, 2.1)

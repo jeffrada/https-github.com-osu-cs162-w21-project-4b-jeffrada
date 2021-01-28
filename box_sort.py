@@ -27,27 +27,18 @@ class Box:
 
 
 def box_sort(box_list):
-    vol_list = []
-    for box in box_list:
-        vol_list.append(box.volume())
-    print(vol_list)
     """
-    Sorts vol_list in ascending order
+  Sorts box_list in ascending order
     """
-    for index in range(1, len(vol_list)):
-        value = vol_list[index]
+    for index in range(1, len(box_list)):
+        box = box_list[index]
+        box_volume = box.volume()
         pos = index - 1
-        while pos >= 0 and vol_list[pos] > value:
-            vol_list[pos + 1] = vol_list[pos]
+        while pos >= 0 and box_list[pos].volume() > box_volume:
+            box_list[pos + 1] = box_list[pos]
             pos -= 1
-        vol_list[pos + 1] = value
-    print(vol_list)
-    sorted_box_list = []
-    for volume in vol_list:
-        for box in box_list:
-            if box.volume() == volume:
-                sorted_box_list.append(box)
-    return sorted_box_list
+        box_list[pos + 1] = box
+
 
 # Below is testing code
 b1 = Box(3.4, 19.8, 2.1)
